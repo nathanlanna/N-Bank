@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+.App{
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: blue;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: double #1af1df;
+    border-radius: 20px;
+}
+.container .cabecalho{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+.container .cabecalho h1{
+    margin: 0;
+}
+.container .dados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 200px;
+}
+.container .dados .valor{
+    width: 90%;
+    background-color: whitesmoke;
+    border: inset whitesmoke 3px;
+    border-radius: 3px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .dados .valores{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container .dados div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container .dados span{
+    display: flex;
+    align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .rodape{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
 }
