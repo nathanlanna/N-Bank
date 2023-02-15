@@ -20,16 +20,14 @@ class Layout extends React.Component {
         <main className='dados'>
             <input className='valor' placeholder='Digite o valor desejado:'></input>
             <div className='valores'>
-              <div><span>Saldo</span><p>{this.state.saldo}</p></div>
+              <div><span>Saldo</span><p>R$ {this.state.saldo}</p></div>
 
-              <div ><span>Rendimento</span><p>{this.state.rendimento}</p></div>
+              <div ><span>Rendimento</span><p>R$ {this.state.rendimento}</p></div>
             </div>
         </main>
         <footer className='rodape'>
-          <div className='botoes'>
             <Button tipo='Sacar'></Button>
             <Button tipo='Depositar'></Button>
-          </div>
         </footer>
       </div>
     );
@@ -38,10 +36,22 @@ class Layout extends React.Component {
 
 class Button extends React.Component{
   constructor(props){
-    super (props)
+    super (props);
+    this.handleClick = this.handleClick.bind(this);
   }
+  handleClick(tipo){
+    tipo = this.props;
+    console.log(tipo);
+      if(tipo.value==='Sacar'){
+        console.log('dinheiro sacado');
+      } else{
+        console.log('dinheiro depositado');
+      };
+
+  };
+
   render(){
-    return <button>{this.props.tipo}</button>
+    return <button className='btn-botao' onClick={this.handleClick}>{this.props.tipo}</button>
   }
 }
 function App() {
